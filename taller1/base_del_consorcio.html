@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>La Base del Consorcio Oscuro</title>
+		<link rel="stylesheet" href="styles.css" />
+		<style>
+			body {
+				background-image: url("images/base.webp");
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+			input {
+				display: block;
+				margin: 10px;
+				padding: 10px;
+				border: 2px solid yellow;
+				background-color: rgba(0, 0, 0, 0.5);
+				color: white;
+			}
+			button {
+				display: block;
+				margin: 10px;
+				color: yellow;
+				background-color: rgba(0, 0, 0, 0.5);
+				border: 2px solid yellow;
+				padding: 10px;
+				cursor: pointer;
+			}
+		</style>
+		<script>
+			function checkPuzzle() {
+				var answer = document.getElementById("puzzleAnswer").value;
+				if (answer == "42") {
+					alert("¡Correcto! La puerta se ha desactivado.");
+					window.location.href = "celda_mentor.html";
+				} else {
+					alert("Respuesta incorrecta. Inténtalo de nuevo.");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<h1>La Base del Consorcio Oscuro</h1>
+		<br /><br /><br /><br /><br />
+		<div>
+			<p style="color: yellow">
+				Para desactivar la puerta de seguridad, resuelve este sencillo puzzle:
+			</p>
+			<p style="color: yellow">
+				¿Cuál es la respuesta a la vida, el universo y todo lo demás?
+			</p>
+			<input
+				type="text"
+				id="puzzleAnswer"
+				placeholder="Escribe tu respuesta aquí"
+			/>
+			<button onclick="checkPuzzle()">Enviar</button>
+		</div>
+	</body>
+</html>

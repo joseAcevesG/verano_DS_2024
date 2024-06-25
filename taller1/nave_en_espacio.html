@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Nave en el Espacio</title>
+		<link rel="stylesheet" href="styles.css" />
+		<style>
+			body {
+				background-image: url("images/espacio.webp");
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center;
+			}
+			button {
+				display: block;
+				margin: 10px;
+				color: yellow;
+				background-color: rgba(0, 0, 0, 0.5);
+				border: 2px solid yellow;
+				padding: 10px;
+				cursor: pointer;
+			}
+		</style>
+		<script>
+			function decisionEsconderse() {
+				alert(
+					"Te escondes en el campo de asteroides, pero la nave sufre daños."
+				);
+				window.location.href = "campo_asteroides.html";
+			}
+			function decisionEnfrentar() {
+				alert("Derribas a la nave cazadora, pero ahora conocen tu ubicación.");
+				window.location.href = "ubicacion_revelada.html";
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Nave en el Espacio</h1>
+		<div>
+			<p>Una nave cazadora enemiga se aproxima. ¿Qué harás?</p>
+			<button onclick="decisionEsconderse()">
+				Esconderse en el campo de asteroides
+			</button>
+			<button onclick="decisionEnfrentar()">
+				Enfrentar a la nave cazadora
+			</button>
+		</div>
+	</body>
+</html>
