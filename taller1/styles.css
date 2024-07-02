@@ -17,3 +17,9 @@ a {
 	border: 2px solid yellow;
 	background-color: rgba(0, 0, 0, 0.5);
 }
+
+.container {
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 20px;
+	border-radius: 10px;
+}
